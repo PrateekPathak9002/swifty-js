@@ -15,3 +15,11 @@ function click(selector,functionToRun) {
 		elem[i].addEventListener('click',functionToRun)
 	}
 }
+
+function hover(selector,functionToRun) {
+	elem = document.querySelectorAll(selector)
+	for(var i = 0 ; i < elem.length ; i++ ){
+		elem[i].addEventListener('mouseover',functionToRun)
+	}
+}
+
