@@ -1,6 +1,6 @@
 {
   "name": "swifty-js",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A tool that makes your programming work easier . Best when used with swifty-css",
   "main": "swifty.js",
   "scripts": {
