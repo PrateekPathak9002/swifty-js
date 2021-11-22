@@ -23,3 +23,7 @@ function hover(selector,functionToRun) {
 	}
 }
 
+let dropdowns = document.getElementsByClassName('sw-dropdown')
+for(var i = 0 ; i < dropdowns.length ; i++ ){
+	dropdowns[i].append('<i class="fas fa-arrow-down down"></i>')
+	document.getElementsByClassName('down')[0].style.textAlign = 'right'
