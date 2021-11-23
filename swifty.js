@@ -28,6 +28,8 @@ window.onload = function(){
 
 	for(var i = 0 ; i < dropdowns.length ; i++ ){
 		console.log(dropdowns[i].className)
-		dropdowns[i].innerHTML += '<i class="fas fa-arrow-down down" aria-hidden="true"></i>';
+		dropdowns[i].innerHTML += '<i class="fas fa-arrow-circle-down down " aria-hidden="true"></i>';
+		dropdowns[i].className = 'dropdown-text';
+		document.querySelectorAll(".down")[i].style.float = 'right'
 	}
 }
