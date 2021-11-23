@@ -30,6 +30,5 @@ window.onload = function(){
 		console.log(dropdowns[i].className)
 		dropdowns[i].innerHTML += '<i class="fas fa-arrow-circle-down down " aria-hidden="true"></i>';
 		document.querySelectorAll(".down")[i].style.float = 'right'
-		document.querySelectorAll(".down")[i].style.position = 'absolute'
 	}
 }
