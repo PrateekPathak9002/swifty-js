@@ -27,13 +27,11 @@ window.onload = function(){
 	let dropdowns = document.querySelectorAll(".head")
 
 	for(var i = 0 ; i < dropdowns.length ; i++ ){
-		console.log(dropdowns[i].className)
 		dropdowns[i].innerHTML += '<i class="fas fa-arrow-circle-down down " aria-hidden="true"></i>';
 	}
 	$(".down").click(function (e) {
 		let element;
 		let options = e.target.parentElement.parentElement.querySelectorAll('.sw-options')[0]
-		console.log(options)
 		if (options.style.display == 'none') {
 			options.style.display = 'block'
 			options.style.position = 'static'
