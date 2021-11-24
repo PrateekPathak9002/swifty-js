@@ -31,17 +31,18 @@ window.onload = function(){
 		dropdowns[i].innerHTML += '<i class="fas fa-arrow-circle-down down " aria-hidden="true"></i>';
 	}
 	$(".down").click(function (e) {
-		for(var i = 0 ; i < e.target.parentElement.parentElement.querySelectorAll('.sw-dropdown-options').length ; i++ ){
-			let element = e.target.parentElement.parentElement.querySelectorAll('.sw-dropdown-options')[i]
-			if (element.style.display == 'none') {
-				element.style.display = 'inline'
-				e.target.style.transform = 'rotate(0deg)'
-			}else{
-				element.style.display = 'none'
-				e.target.style.transform = 'rotate(-90deg)'
-			}
+		let element;
+		let options = e.target.parentElement.parentElement.querySelectorAll('.sw-options')[0]
+		console.log(options)
+		if (options.style.display == 'none') {
+			options.style.display = 'block'
+			options.style.position = 'static'
+			e.target.style.transform = 'rotate(0deg)'
+		}else{
+			options.style.display = 'none'
+			options.style.position = 'absolute'
+			e.target.style.transform = 'rotate(-90deg)'
 		}
-		
 
 	});
 }
