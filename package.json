@@ -1,6 +1,6 @@
 {
   "name": "swifty_js_toolkit",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A tool that makes your programming work easier . Best when used with swifty-css",
   "main": "swifty.js",
   "scripts": {
