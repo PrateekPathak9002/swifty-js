@@ -24,6 +24,14 @@ window.onload = function(){
 		}
 	}
 
+	function updateDynamic() {
+		let dropdowns = document.querySelectorAll(".head")
+
+		for(var i = 0 ; i < dropdowns.length ; i++ ){
+			dropdowns[i].innerHTML += '<i class="fas fa-arrow-circle-down down " aria-hidden="true"></i>'
+		}
+	}
+	
 	let dropdowns = document.querySelectorAll(".head")
 
 	for(var i = 0 ; i < dropdowns.length ; i++ ){
