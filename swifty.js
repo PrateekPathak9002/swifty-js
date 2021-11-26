@@ -31,24 +31,37 @@ window.onload = function(){
 			dropdowns[i].innerHTML += '<i class="fas fa-arrow-circle-down down " aria-hidden="true"></i>'
 		}
 	}
-	
+
 	let dropdowns = document.querySelectorAll(".head")
 
 	for(var i = 0 ; i < dropdowns.length ; i++ ){
-		dropdowns[i].innerHTML += '<i class="fas fa-arrow-circle-down down " aria-hidden="true"></i>'
+		dropdowns[i].innerHTML += '	<i class="fas fa-chevron-down down"></i>'
 	}
-	$(".down").click(function (e) {
-		let element;
-		let options = e.target.parentElement.parentElement.querySelectorAll('.sw-options')[0]
+
+	for(var m = 0 ; m < document.querySelectorAll('.sw-dropdowns').length ; m++ ){
+		for(var l = 1 ; l < document.querySelectorAll('.sw-dropdowns')[m].querySelectorAll('.sw-dropdown').length ; l++ ){
+			let options = document.querySelectorAll('.sw-dropdowns')[m].querySelectorAll('.sw-dropdown')[l].querySelectorAll('.sw-options')[0]
+			options.style.display = 'none'
+			options.style.position = 'absolute'
+		}
+		document.querySelectorAll('.sw-dropdowns')[m].querySelectorAll('.sw-dropdown')[0].querySelectorAll('.head')[0].style.background = '#e7f1ff'
+	}
+	
+	$(".head").click(function (e) {
+		let options = e.target.parentElement.querySelectorAll('.sw-options')[0]
 		if (options.style.display == 'none') {
 			options.style.display = 'block'
 			options.style.position = 'static'
-			e.target.style.transform = 'rotate(0deg)'
+			options.parentElement.querySelectorAll('.head')[0].style.background = '#e7f1ff'
+			e.target.querySelectorAll('i')[0].style.transform = 'rotate(0deg)'
 		}else{
 			options.style.display = 'none'
 			options.style.position = 'absolute'
-			e.target.style.transform = 'rotate(-90deg)'
+			options.parentElement.querySelectorAll('.head')[0].style.background = 'white'
+			e.target.querySelectorAll('i')[0].style.transform = 'rotate(-90deg)'
 		}
 
 	});
+
+
 }
