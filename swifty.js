@@ -24,23 +24,22 @@ window.onload = function(){
 		}
 	}
 
-	function updateDynamic() {
-		let dropdowns = document.querySelectorAll(".head")
-
-		for(var i = 0 ; i < dropdowns.length ; i++ ){
-			dropdowns[i].innerHTML += '<i class="fas fa-arrow-circle-down down " aria-hidden="true"></i>'
-		}
-	}
 
 	let dropdowns = document.querySelectorAll(".head")
+	let dropdownsRight = document.querySelectorAll(".right")
+	let dropdownsLeft = document.querySelectorAll(".left")
 
 	for(var i = 0 ; i < dropdowns.length ; i++ ){
-		dropdowns[i].innerHTML += '	<i class="fas fa-chevron-down down"></i>'
+			if (dropdowns[i].className.includes('right')) {
+				dropdowns[i].innerHTML += '	<i class="fas fa-chevron-down down-right"></i>'
+			}else if(dropdowns[i].className.includes('left')){
+				dropdowns[i].innerHTML += '	<i class="fas fa-chevron-down down-left"></i>'
+			}
 	}
 
 	for(var m = 0 ; m < document.querySelectorAll('.sw-dropdowns').length ; m++ ){
 		for(var l = 1 ; l < document.querySelectorAll('.sw-dropdowns')[m].querySelectorAll('.sw-dropdown').length ; l++ ){
-			let options = document.querySelectorAll('.sw-dropdowns')[m].querySelectorAll('.sw-dropdown')[l].querySelectorAll('.sw-options')[0]
+			let options = document.querySelectorAll('.sw-dropdowns')[m].querySelectorAll('.sw-dropdown')[l].querySelectorAll('.sw-dropdown-body')[0]
 			options.style.display = 'none'
 			options.style.position = 'absolute'
 		}
@@ -49,7 +48,7 @@ window.onload = function(){
 	}
 	
 	$(".head").click(function (e) {
-		let options = e.target.parentElement.querySelectorAll('.sw-options')[0]
+		let options = e.target.parentElement.querySelectorAll('.sw-dropdown-body')[0]
 		if (options.style.display == 'none') {
 			options.style.display = 'block'
 			options.style.position = 'static'
