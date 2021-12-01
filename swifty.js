@@ -31,9 +31,9 @@ window.onload = function(){
 
 	for(var i = 0 ; i < dropdowns.length ; i++ ){
 			if (dropdowns[i].className.includes('right')) {
-				dropdowns[i].innerHTML += '	<i class="fas fa-chevron-down down-right"></i>'
+				dropdowns[i].innerHTML += '<i class="fas fa-chevron-down down-right"></i>'
 			}else if(dropdowns[i].className.includes('left')){
-				dropdowns[i].innerHTML += '	<i class="fas fa-chevron-down down-left"></i>'
+				dropdowns[i].innerHTML += '	<i class="fas fa-chevron-down down-right"></i>'
 			}
 	}
 
