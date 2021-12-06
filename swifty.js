@@ -64,4 +64,11 @@ window.onload = function(){
 	});
 
 
+	$('.sw-alert-dismiss').click(function (e) { 
+		$('.sw-alert-dismiss').parent()[0].style.opacity = '0'
+		setTimeout(() => {
+			$('.sw-alert-dismiss').parent()[0].style.display = 'none'
+		}, 305);
+	});
+
 }
